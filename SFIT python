@@ -1,0 +1,100 @@
+"""
+SFIT Synthetic Event Data Generator — Improved with Explicit KWW Tails
+======================================================================
+Generates realistic event-by-event data that reproduces the main SFIT signatures:
+- 1.20134 mHz Quantum Heartbeat modulation
+- Explicit Kohlrausch–Williams–Watts (KWW) relaxation tails after each mirror step
+- Phase-locked π-overshoot behavior
+
+Output: data/processed/synthetic_event_sample.dat
+"""
+
+import numpy as np
+import os
+from datetime import datetime
+
+# ==================== SFIT KEY CONSTANTS ====================
+NU_RES = 0.00120134          # Hz — Quantum Heartbeat
+OMEGA_RES = 2 * np.pi * NU_RES
+PERIOD = 1.0 / NU_RES        # ≈ 833.3 s
+HALF_PERIOD = PERIOD / 2     # ≈ 416.65 s
+K_COUPLING = 1.060
+TAU_KWW = 832.6              # s
+BETA_KWW = K_COUPLING        # β = 1.060
+BASE_RATE = 50.0             # average events per second
+MOD_AMPLITUDE = 0.00122      # ~0.122% contrast
+OVERSHOOT_FACTOR = 1.045     # ~4.5% initial overshoot
+TOTAL_DURATION = 7200.0      # 2 hours
+
+np.random.seed(42)
+step_times = []
+
+def kww_decay(t, t_step):
+    """Explicit KWW stretched exponential decay"""
+    if t <= t_step:
+        return 0.0
+    dt = t - t_step
+    return np.exp( - (dt / TAU_KWW) ** BETA_KWW )
+
+def sfit_modulation(t):
+    """Modulation including heartbeat + explicit KWW tails from mirror steps"""
+    heartbeat = MOD_AMPLITUDE * np.cos(OMEGA_RES * t)
+    
+    kww_contribution = 0.0
+    for t_step in step_times:
+        kww_contribution += (OVERSHOOT_FACTOR - 1.0) * kww_decay(t, t_step)
+    
+    # Extra π-phase overshoot near half-period
+    phase = (t % PERIOD) / HALF_PERIOD
+    extra = 0.0
+    if abs(phase - 1.0) < 0.03 or abs(phase) < 0.03:
+        extra = 0.015 * np.exp(-abs(phase - 1.0) * 30)
+    
+    return 1.0 + heartbeat + kww_contribution + extra
+
+def generate_synthetic_events():
+    global step_times
+    print("Generating SFIT synthetic data with explicit KWW tails...")
+    
+    step_times = np.arange(0, TOTAL_DURATION + 1, PERIOD)
+    print(f"Scheduled {len(step_times)} mirror steps (every {PERIOD:.1f} s)")
+    
+    timestamps = []
+    channels = []
+    
+    t = 0.0
+    while t < TOTAL_DURATION:
+        rate = BASE_RATE * sfit_modulation(t)
+        dt = np.random.exponential(1.0 / max(rate, 0.1))
+        t += dt
+        if t >= TOTAL_DURATION:
+            break
+            
+        channel = int(np.random.normal(12, 3)) + 8
+        
+        timestamps.append(int(t * 1e6))   # microseconds
+        channels.append(channel)
+    
+    print(f"Generated {len(timestamps):,} events over {TOTAL_DURATION/3600:.1f} hours")
+    return np.array(timestamps), np.array(channels)
+
+def save_synthetic_data(timestamps, channels, filename="data/processed/synthetic_event_sample.dat"):
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
+    
+    with open(filename, "w") as f:
+        f.write("# SFIT Synthetic Event Data with Explicit KWW Tails\n")
+        f.write("# Format: timestamp_us (relative)   detector_channel\n")
+        f.write(f"# Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write(f"# Contains 1.20134 mHz Quantum Heartbeat + KWW tails (τ={TAU_KWW} s, β={BETA_KWW})\n\n")
+        
+        for ts, ch in zip(timestamps, channels):
+            f.write(f"{ts} {ch}\n")
+    
+    print(f"✅ Synthetic data saved to: {filename}")
+    print(f"   File size: {os.path.getsize(filename)/1024:.1f} KB")
+
+if __name__ == "__main__":
+    timestamps, channels = generate_synthetic_events()
+    save_synthetic_data(timestamps, channels)
+    
+    print("\nNext step: Run 'python scripts/analyze_synthetic.py' to verify PSD and KWW fits.")
