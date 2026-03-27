@@ -1,0 +1,11 @@
+
+### 2. `requirements.txt`
+
+```txt
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+jupyter
+sympy
+h5py                # for saving large wavefunction data
+tqdm                # progress bars
