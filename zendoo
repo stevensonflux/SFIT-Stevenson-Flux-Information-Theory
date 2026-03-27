@@ -1,0 +1,10 @@
+## Data Availability (Zenodo)
+
+**Zenodo Record (DOI):** [10.5281/zenodo.19263994](https://doi.org/10.5281/zenodo.19263994)
+
+This record contains supporting PDFs (theory, protocols, Python supplement, FAQ, etc.).
+
+**Processed derived files** (PSD, KWW fits, LLR, binned time series) and synthetic samples are available in the `data/processed/` folder of this GitHub repository or will be added to the Zenodo record in v2.
+
+**Raw event-by-event data** (2018 ILL 3-14-412 counts file):
+Available upon request via email (stevensonflu@outlook.com) with a brief description of intended use.
