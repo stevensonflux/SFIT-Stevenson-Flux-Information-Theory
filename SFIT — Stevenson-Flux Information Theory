@@ -1,0 +1,49 @@
+# SFIT — Stevenson-Flux Information Theory
+
+**GR + QM Unified through Dynamic Information Flux**  
+**The 1.20134 mHz Quantum Heartbeat** — A Testable Bridge Between General Relativity and Quantum Mechanics
+
+## Overview
+
+Stevenson-Flux Information Theory (SFIT) proposes that gravity is a **dynamic information-carrying flux** vibrating at a precise geometric resonance frequency of **1.20134 mHz** (period 833.3 s), known as the **Quantum Heartbeat** or **Quantum Echo**.
+
+This framework quantitatively explains the previously unexplained residuals in the qBounce ultra-cold neutron experiment (ILL Archive 3-14-412), including:
+- Clear 1.20134 mHz modulation at **14.28σ** significance
+- 832.6 s KWW (stretched exponential) relaxation tails with β = 1.060
+- 4.5% post-step overshoots phase-locked to the resonance
+- Bessel sidebands consistent with modulation index derived from K = 1.060
+
+The theory introduces a small non-reciprocal, time-dependent correction to the metric tensor while preserving the equivalence principle in the adiabatic limit. It offers a **falsifiable prediction** for future GRANIT-style experiments.
+
+**Website:** [stevensonfluxinformationtheory.com](https://www.stevensonfluxinformationtheory.com/)
+
+## Key Features of This Repository
+
+- Python scripts to generate and analyze synthetic data that reproduces the main SFIT signatures
+- Constants and core functions tied directly to the preprint
+- Documentation and supporting PDFs
+- Clear path for independent verification and extension
+
+## Quick Start
+
+```bash
+git clone https://github.com/stevensonflux/SFIT-Stevenson-Flux-Information-Theory.git
+cd SFIT-Stevenson-Flux-Information-Theory
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Generate synthetic data (embeds 1.20134 mHz heartbeat + KWW tails)
+python scripts/generate_synthetic_event_data.py
+
+# Analyze: PSD + KWW fitting
+python scripts/analyze_synthetic.py
+@misc{stevenson2026sfit,
+  author       = {Douglas G. Stevenson},
+  title        = {SFIT — Stevenson-Flux Information Theory},
+  year         = {2026},
+  publisher    = {GitHub},
+  journal      = {GitHub repository},
+  howpublished = {\url{https://github.com/stevensonflux/SFIT-Stevenson-Flux-Information-Theory}},
+  doi          = {10.5281/zenodo.19263994}
+}
