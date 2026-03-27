@@ -1,38 +1,41 @@
-# Stevenson-Flux Information Theory (SFIT)
+# SFIT — Stevenson-Flux Information Theory
 
-**A dynamic information-carrying flux model of gravity**  
-**Quantum Heartbeat at 1.20134 mHz** – First testable laboratory bridge between General Relativity and Quantum Mechanics.
+**A Dynamical Information-Carrying Flux Model of Gravity**  
+**The 1.20134 mHz Quantum Heartbeat** — A Testable Bridge Between General Relativity and Quantum Mechanics
 
 ## Overview
-SFIT proposes that gravity is not purely static curvature but a **dynamic information-carrying flux** vibrating at a precise geometric resonance frequency **ν_res = 1.20134 mHz** (period 833.3 s) — the "Quantum Heartbeat" or "Quantum Echo".
 
-This framework quantitatively reproduces the unexplained residuals observed in the landmark **qBounce ultra-cold neutron experiment** (ILL Archive 3-14-412), including:
-- 1.20134 mHz modulation
-- 832.6 s Kohlrausch–Williams–Watts (KWW) relaxation tails with β = 1.060
-- 4.5% post-step overshoots
-- Bessel sidebands J₁²(β)/J₀²(β) ≈ 0.0152
-- Coherent phase-locking with π-overshoot at t = 416.65 s
-- Aggregate significance of **14.28σ** across 34 mirror-step epochs
+Stevenson-Flux Information Theory (SFIT) proposes that gravity is not merely static spacetime curvature, but a **dynamic information-carrying flux** that vibrates at a precise geometric resonance frequency of **1.20134 mHz** (period 833.3 s), referred to as the **Quantum Heartbeat** or **Quantum Echo**.
 
-The theory introduces a small non-reciprocal, time-dependent correction to the metric tensor via the refined coupling kernel **K = 1.060**, while preserving the equivalence principle in the adiabatic limit.
+This framework quantitatively accounts for the unexplained residuals in the landmark qBounce ultra-cold neutron experiment (ILL Archive 3-14-412), including:
 
-### Key Prediction
-Clear, falsifiable prediction for the next **GRANIT-style** ultra-cold neutron run: exact frequency, phase, sideband structure, and KWW tail locked to the 833.3 s cycle.
+- A clear 1.20134 mHz modulation detected at **14.28σ** significance
+- 832.6 s Kohlrausch–Williams–Watts (KWW) relaxation tails with stretching exponent β = 1.060
+- Phase-locked 4.5% post-step overshoots
+- Bessel sidebands consistent with the modulation index derived from the coupling kernel **K = 1.060**
 
-Website: [stevensonfluxinformationtheory.com](https://www.stevensonfluxinformationtheory.com/)
+SFIT introduces a small, non-reciprocal, time-dependent correction to the metric tensor while preserving the equivalence principle in the adiabatic (long-time) limit. It offers a **clearly falsifiable prediction** for future GRANIT-style ultra-cold neutron experiments.
 
-## Repository Contents
-- **src/** – Core Python package (SFIT potential, TDSE solver, analysis tools)
-- **scripts/** – Reproducible analysis scripts (TDSE benchmark, PSD, KWW fits, Bayesian stopping rule)
-- **notebooks/** – Educational Jupyter notebooks
-- **data/** – Processed data and instructions for raw ILL/qBounce files
-- **results/** – Generated figures and tables (PSD, wave-packet evolution, etc.)
-- **preprint/** – Full Preprint PDF and Python Supplement
-- **tests/** – Unit tests
+**Main Website:** [stevensonfluxinformationtheory.com](https://www.stevensonfluxinformationtheory.com/)
+
+## Key Features of This Repository
+
+- Fully reproducible Python scripts to generate and analyze synthetic data that embeds the core SFIT signatures (1.20134 mHz resonance + explicit KWW tails)
+- Core constants and functions tied directly to the preprint
+- Supporting documentation and PDFs
+- Clear instructions for independent verification
 
 ## Quick Start
 
 ```bash
-git clone https://github.com/yourusername/stevenson-flux-information-theory.git
-cd stevenson-flux-information-theory
+git clone https://github.com/stevensonflux/SFIT-Stevenson-Flux-Information-Theory.git
+cd SFIT-Stevenson-Flux-Information-Theory
+
+# Install dependencies
 pip install -r requirements.txt
+
+# Generate synthetic event data (contains 1.20134 mHz heartbeat + KWW tails)
+python scripts/generate_synthetic_event_data.py
+
+# Analyze the data: PSD with resonance peak + KWW fitting
+python scripts/analyze_synthetic.py
