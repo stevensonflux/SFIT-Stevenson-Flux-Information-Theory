@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this repository or the SFIT theory, please cite it as below."
+title: "Stevenson-Flux Information Theory (SFIT)"
+authors:
+  - family-names: "Stevenson"
+    given-names: "Douglas G."
+    email: "stevensonflu@outlook.com"
+    website: "https://www.stevensonfluxinformationtheory.com/"
+version: "1.0"
+date-released: "2026-03-27"
+url: "https://github.com/yourusername/stevenson-flux-information-theory"
+repository-code: "https://github.com/yourusername/stevenson-flux-information-theory"
+license: "MIT"
+keywords:
+  - quantum-gravity
+  - general-relativity
+  - quantum-mechanics
+  - ultracold-neutrons
+  - qBounce
+  - GRANIT
