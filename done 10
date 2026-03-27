@@ -1,0 +1,13 @@
+# Make sure folders exist
+mkdir -p data/processed results/figures
+
+# Generate the synthetic data file
+python scripts/generate_synthetic_event_data.py
+
+# Run the analyzer to create plots
+python scripts/analyze_synthetic.py
+
+# Add everything and push
+git add .
+git commit -m "Add generated synthetic data file and analysis plots"
+git push
