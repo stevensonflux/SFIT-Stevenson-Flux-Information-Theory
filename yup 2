@@ -1,0 +1,9 @@
+"""SFIT Physical Constants"""
+
+NU_RES = 0.00120134          # Hz - Quantum Heartbeat resonance
+K_COUPLING = 1.060
+TAU_KWW = 832.6              # seconds
+BETA_KWW = K_COUPLING
+BASE_RATE = 50.0
+MOD_AMPLITUDE = 0.00122
+OVERSHOOT_FACTOR = 1.045
