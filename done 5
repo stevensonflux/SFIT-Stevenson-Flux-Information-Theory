@@ -1,0 +1,27 @@
+# 1. Create proper folders
+mkdir -p scripts data/processed results/figures src
+
+# 2. Move scripts into the correct folder
+mv generate_synthetic_event_data.py scripts/ 2>/dev/null || true
+mv analyze_synthetic.py scripts/ 2>/dev/null || true
+
+# 3. Generate the synthetic data (this is the most important step)
+python scripts/generate_synthetic_event_data.py
+
+# 4. Run the analyzer to create plots
+python scripts/analyze_synthetic.py
+
+# 5. Create requirements.txt
+cat > requirements.txt << EOF
+numpy
+scipy
+matplotlib
+EOF
+
+# 6. Create src/constants.py
+cat > src/constants.py << EOF
+NU_RES = 0.00120134
+K_COUPLING = 1.060
+TAU_KWW = 832.6
+BETA_KWW = K_COUPLING
+EOF
