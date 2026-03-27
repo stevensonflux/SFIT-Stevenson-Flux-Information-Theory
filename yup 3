@@ -1,0 +1,3 @@
+git add scripts/ data/ results/ src/ requirements.txt
+git commit -m "Add synthetic data generator, analyzer, generated data file, and requirements"
+git push
