@@ -1,0 +1,14 @@
+# 1. Create proper folders
+mkdir -p scripts data/processed results/figures src
+
+# 2. Move the scripts into the scripts folder (if they're still in root)
+mv generate_synthetic_event_data.py scripts/ 2>/dev/null || true
+mv analyze_synthetic.py scripts/ 2>/dev/null || true
+
+# 3. Generate the synthetic data
+python scripts/generate_synthetic_event_data.py
+
+# 4. Analyze it (this creates the plots)
+python scripts/analyze_synthetic.py
+
+# 5. Add the support files
