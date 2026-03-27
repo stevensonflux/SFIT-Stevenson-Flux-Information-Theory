@@ -1,0 +1,8 @@
+@misc{stevenson2026sfit,
+  author       = {Douglas G. Stevenson},
+  title        = {SFIT — Stevenson-Flux Information Theory},
+  year         = {2026},
+  publisher    = {GitHub},
+  howpublished = {\url{https://github.com/stevensonflux/SFIT-Stevenson-Flux-Information-Theory}},
+  doi          = {10.5281/zenodo.19263994}
+}
