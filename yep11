@@ -1,0 +1,5 @@
+git clone https://github.com/stevensonflux/SFIT-Stevenson-Flux-Information-Theory.git
+cd SFIT-Stevenson-Flux-Information-Theory
+pip install -r requirements.txt
+python scripts/generate_synthetic_event_data.py
+python scripts/analyze_synthetic.py
