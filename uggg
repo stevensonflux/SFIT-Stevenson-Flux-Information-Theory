@@ -1,0 +1,9 @@
+<h3>Power Spectral Density (PSD) showing the 1.20134 mHz Quantum Heartbeat</h3>
+<img src="https://stevensonfluxinformationtheory.com/path-to/synthetic_psd_heartbeat.png" 
+     alt="SFIT PSD with 1.20134 mHz peak" 
+     style="max-width:100%; height:auto; display:block; margin:20px 0;">
+
+<h3>KWW Relaxation Tail Fits (τ ≈ 832.6 s, β = 1.060)</h3>
+<img src="https://stevensonfluxinformationtheory.com/path-to/synthetic_kww_fits.png" 
+     alt="SFIT KWW fit plot" 
+     style="max-width:100%; height:auto; display:block; margin:20px 0;">
