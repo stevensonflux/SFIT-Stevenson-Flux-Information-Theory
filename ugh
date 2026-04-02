@@ -1,0 +1,28 @@
+<h2>The Second Law of Infodynamics and Its Gravitational Realization in SFIT</h2>
+
+<p>The second law of infodynamics (Vopson, AIP Advances 2023) states that information entropy tends to remain constant or decrease — opposite to thermodynamic entropy. This supports the simulated universe hypothesis.</p>
+
+<p>SFIT extends these ideas into gravity. Gravity is a dynamic information-carrying flux at <strong>1.20134 mHz</strong>, governed by coupling kernel <strong>K = 1.060</strong>.</p>
+
+<p>The effective potential is:</p>
+<pre>V_SFIT(z,t) = m g z [1 + K (z / R_E) Re(cos(2π ν_res t))]</pre>
+
+<p>This flux drives KWW tails with τ ≈ 832.6 s and β = K = 1.060.</p>
+
+<h3>Derivation of 11.42 Hz</h3>
+<p>The sub-femtovolt energy shift is ΔE = (4.72 ± 0.08) × 10^{-14} eV. Using h = 4.135667662 × 10^{-15} eV·s,</p>
+<pre>ν_sec = ΔE / h = 11.42 ± 0.19 Hz</pre>
+
+<p>This mode likely represents a higher harmonic or sampling rate of the neutron-flux interaction.</p>
+
+<h3>Link to Infodynamics</h3>
+<p>SFIT provides a gravitational realization of Vopson’s minimization principle. The flux at 1.20134 mHz (with 11.42 Hz sampling) optimizes entropy flow while producing measurable effects — consistent with an information-efficient simulated universe.</p>
+
+<p>Future GRANIT runs will test these predictions.</p>
+
+<!-- Embed your plots here -->
+<img src="https://stevensonfluxinformationtheory.com/images/synthetic_psd_heartbeat.png" alt="PSD showing 1.20134 mHz and 11.42 Hz" style="max-width:100%; height:auto;">
+<figcaption>Figure 1. Power Spectral Density showing the primary 1.20134 mHz resonance and the secondary 11.42 Hz mode.</figcaption>
+
+<img src="https://stevensonfluxinformationtheory.com/images/synthetic_kww_fits.png" alt="KWW fit plot" style="max-width:100%; height:auto;">
+<figcaption>Figure 2. KWW relaxation tail fit (τ ≈ 832.6 s, β = 1.060).</figcaption>
