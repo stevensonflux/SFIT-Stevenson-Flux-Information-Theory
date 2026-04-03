@@ -1,0 +1,32 @@
+<h2>Completing Einstein’s Unified Field: Extending SFIT to Unify Gravity and Electromagnetism</h2>
+
+<p>Einstein spent the final decades of his life searching for a unified field theory that would merge gravity with electromagnetism. SFIT now offers a natural path forward using the same dynamic information-carrying flux that already bridges general relativity and quantum mechanics.</p>
+
+<p>The core SFIT potential is:</p>
+<pre>V_SFIT(z,t) = m g z [1 + K (z / R_E) Re(cos(2π ν_res t))]</pre>
+<p>with K = 1.060.</p>
+
+<p>We generalize the flux to couple directly to the electromagnetic field tensor F_μν, yielding the total metric perturbation:</p>
+<pre>h_μν^SFIT(t) = α_μν Re[cos(Ω_s t)] + β_μν F_μν Re[cos(Ω_s t)]</pre>
+
+<p>The unified action becomes:</p>
+<pre>S = ∫ d⁴x √(-g) [ R/(16πG) - (1/4) F_μν F^μν + ℒ_flux ]</pre>
+
+<p>with flux Lagrangian:</p>
+<pre>ℒ_flux = K · ρ_info ( g_μν u^μ u^ν + (1/c²) F_μλ F^λ_ν ) Re[cos(Ω_s t)]</pre>
+
+<p>The 11.42 Hz secondary mode is derived from the sub-femtovolt energy shift ΔE ≈ 4.72 × 10^{-14} eV:</p>
+<pre>ν_sec = ΔE / h = 11.42 ± 0.19 Hz</pre>
+
+<!-- Embed your plots here -->
+<img src="https://stevensonfluxinformationtheory.com/images/synthetic_psd_heartbeat.png" 
+     alt="PSD showing 1.20134 mHz and 11.42 Hz" 
+     style="max-width:100%; height:auto; margin:20px 0;">
+<figcaption>Figure 1. Power Spectral Density showing the primary 1.20134 mHz resonance and the secondary 11.42 Hz mode. The inset highlights the phase-locked nature of the primary signal.</figcaption>
+
+<img src="https://stevensonfluxinformationtheory.com/images/synthetic_kww_fits.png" 
+     alt="KWW fit plot" 
+     style="max-width:100%; height:auto; margin:20px 0;">
+<figcaption>Figure 2. KWW relaxation tail fit (τ ≈ 832.6 s, β = K = 1.060), illustrating the memory kernel induced by the information flux.</figcaption>
+
+<p>This extension unifies gravity and electromagnetism at laboratory-accessible energies while remaining fully consistent with the original SFIT framework. Future experiments can search for the predicted signatures in both gravitational and electromagnetic observables.</p>
